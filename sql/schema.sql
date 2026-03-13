@@ -1,5 +1,3 @@
--- Simple Student Management System schema + seed data
--- Import this file in phpMyAdmin (SQL tab).
 
 CREATE DATABASE IF NOT EXISTS student_management
   CHARACTER SET utf8mb4
@@ -28,7 +26,7 @@ CREATE TABLE IF NOT EXISTS students (
     ON DELETE SET NULL
 );
 
--- (Optional but helpful) prevent duplicate emails
+
 CREATE UNIQUE INDEX ux_students_email ON students(email);
 
 INSERT INTO courses (course_name) VALUES
